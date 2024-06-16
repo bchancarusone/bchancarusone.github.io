@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const tileViewBtn = document.getElementById('tile-view');
     const galleryDiv = document.getElementById('gallery');
     const tilesDiv = document.getElementById('tiles');
+    const thumbnails = document.querySelectorAll('.thumbnail img');
 
     let currentIndex = 0;
     const images = [
@@ -34,9 +35,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     tileViewBtn.addEventListener('click', () => {
-        const isVisible = tilesDiv.classList.contains('hidden');
-        tilesDiv.classList.toggle('hidden', !isVisible);
-        galleryDiv.classList.toggle('hidden', isVisible);
+        tilesDiv.classList.toggle('hidden');
+        galleryDiv.classList.toggle('hidden');
+    });
+
+    thumbnails.forEach((thumbnail, index) => {
+        thumbnail.addEventListener('click', () => {
+            updateImage(index);
+            currentIndex = index;
+            tilesDiv.classList.add('hidden');
+            galleryDiv.classList.remove('hidden');
+        });
     });
 
     // Initialize the gallery

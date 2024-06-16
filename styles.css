@@ -11,13 +11,8 @@ header {
     padding: 20px;
 }
 
-h1 {
+h1, p {
     margin: 0;
-    font-size: 24px;
-}
-
-p {
-    margin: 5px 0;
 }
 
 #gallery {
@@ -36,12 +31,13 @@ p {
 }
 
 .photo-display {
-    width: 60%;
-    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 80%;
 }
 
 .photo-display img {
-    width: 100%;
+    width: 60%;
     aspect-ratio: 4 / 5;
     border: 2px solid #444;
 }
@@ -49,6 +45,7 @@ p {
 .photo-info {
     text-align: left;
     padding: 10px;
+    width: 40%;
 }
 
 #tile-view {
@@ -69,8 +66,8 @@ p {
 }
 
 .thumbnail img {
-    width: 100px;
-    height: 125px;
+    width: auto;
+    height: 125px; /* Maintain the aspect ratio */
     margin: 5px;
     border: 2px solid #444;
     cursor: pointer;

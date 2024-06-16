@@ -43,10 +43,14 @@ document.addEventListener('DOMContentLoaded', function() {
     toggleViewBtn.addEventListener('click', () => {
         if (galleryDiv.classList.contains('hidden')) {
             galleryDiv.classList.remove('hidden');
+            galleryDiv.classList.add('flex');
+            tilesDiv.classList.remove('flex');
             tilesDiv.classList.add('hidden');
             toggleViewBtn.textContent = 'Tile View';
         } else {
             tilesDiv.classList.remove('hidden');
+            tilesDiv.classList.add('flex');
+            galleryDiv.classList.remove('flex');
             galleryDiv.classList.add('hidden');
             toggleViewBtn.textContent = 'Gallery View';
         }
@@ -56,8 +60,10 @@ document.addEventListener('DOMContentLoaded', function() {
         thumbnail.addEventListener('click', () => {
             updateImage(index);
             currentIndex = index;
+            tilesDiv.classList.remove('flex');
             tilesDiv.classList.add('hidden');
             galleryDiv.classList.remove('hidden');
+            galleryDiv.classList.add('flex');
             toggleViewBtn.textContent = 'Tile View';
         });
     });

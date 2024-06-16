@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
     const images = [
         { src: 'photos/01.png', camera: 'Pentax ES w/ Kodak Portra 800', date: '2022/10', location: 'Parry Sound, ON' },
-        { src: 'path_to_image2.jpg', camera: 'Camera Model 2', date: 'Date 2', location: 'Location 2' },
+        { src: 'photos/02.png', camera: 'Olympus Stylus Epic Zoom 80 w/ Kodak Gold 200', date: '2023/3/15', location: 'Toronto, ON' },
         // Add more images as needed
     ];
 

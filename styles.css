@@ -38,6 +38,8 @@ h1, p {
 
 .photo-display img {
     width: 60%;
+    height: 60%;
+    padding: 20px;
     aspect-ratio: 4 / 5;
     border: 2px solid #444;
 }

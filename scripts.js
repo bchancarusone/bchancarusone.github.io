@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const leftBtn = document.getElementById('left-btn');
     const rightBtn = document.getElementById('right-btn');
-    const tileViewBtn = document.getElementById('tile-view');
+    const toggleViewBtn = document.getElementById('toggle-view');
     const galleryDiv = document.getElementById('gallery');
     const tilesDiv = document.getElementById('tiles');
     const thumbnails = document.querySelectorAll('.thumbnail img');
@@ -34,9 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
         updateImage(currentIndex);
     });
 
-    tileViewBtn.addEventListener('click', () => {
-        tilesDiv.classList.toggle('hidden');
-        galleryDiv.classList.toggle('hidden');
+    toggleViewBtn.addEventListener('click', () => {
+        if (galleryDiv.classList.contains('hidden')) {
+            galleryDiv.classList.remove('hidden');
+            tilesDiv.classList.add('hidden');
+            toggleViewBtn.textContent = 'Tile View';
+        } else {
+            tilesDiv.classList.remove('hidden');
+            galleryDiv.classList.add('hidden');
+            toggleViewBtn.textContent = 'Gallery View';
+        }
     });
 
     thumbnails.forEach((thumbnail, index) => {
@@ -45,10 +52,10 @@ document.addEventListener('DOMContentLoaded', function() {
             currentIndex = index;
             tilesDiv.classList.add('hidden');
             galleryDiv.classList.remove('hidden');
+            toggleViewBtn.textContent = 'Tile View';
         });
     });
 
     // Initialize the gallery
     updateImage(currentIndex);
 });
-

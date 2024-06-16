@@ -34,6 +34,12 @@ document.addEventListener('DOMContentLoaded', function() {
         updateImage(currentIndex);
     });
 
+    // Ensure initial visibility state is set correctly
+    if (!galleryDiv.classList.contains('hidden') && !tilesDiv.classList.contains('hidden')) {
+        // Assuming you want the gallery view to be visible first
+        tilesDiv.classList.add('hidden');
+    }
+
     toggleViewBtn.addEventListener('click', () => {
         if (galleryDiv.classList.contains('hidden')) {
             galleryDiv.classList.remove('hidden');

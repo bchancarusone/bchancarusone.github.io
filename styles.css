@@ -19,7 +19,7 @@ h1, p {
     /* display: flex; */
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 10px;
 }
 
 .nav-btn {
@@ -28,6 +28,7 @@ h1, p {
     color: white;
     font-size: 28px;
     cursor: pointer;
+    padding: 10px;
 }
 
 .photo-display {

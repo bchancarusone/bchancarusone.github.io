@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentIndex = 0;
     const images = [
-        { src: 'path_to_image1.jpg', camera: 'Camera Model 1', date: 'Date 1', location: 'Location 1' },
+        { src: 'photos/01.png', camera: 'Pentax ES w/ Kodak Portra 800', date: '2022/10', location: 'Parry Sound, ON' },
         { src: 'path_to_image2.jpg', camera: 'Camera Model 2', date: 'Date 2', location: 'Location 2' },
         // Add more images as needed
     ];

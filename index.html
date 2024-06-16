@@ -1,12 +1,37 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>Photography Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Photography Portfolio</h1>
-    <p>Brayden Chan Carusone</p>
+    <header>
+        <h1>Photography Portfolio</h1>
+        <p>Brayden Chan Carusone</p>
+    </header>
+    <main>
+        <div id="gallery">
+            <button class="nav-btn" id="left-btn">&#10094;</button>
+            <div class="photo-display">
+                <img src="path_to_image.jpg" alt="Photo Description">
+                <div class="photo-info">
+                    <p>Shot on: [camera]</p>
+                    <p>Date: [date]</p>
+                    <p>Location: [location]</p>
+                </div>
+            </div>
+            <button class="nav-btn" id="right-btn">&#10095;</button>
+        </div>
+        <button id="tile-view">Tile View</button>
+        <div id="tiles" class="hidden">
+            <!-- Thumbnails -->
+            <div class="thumbnail">
+                <img src="path_to_thumbnail.jpg" alt="Thumbnail Description">
+            </div>
+            <!-- Additional thumbnails -->
+        </div>
+    </main>
 </body>
 </html>
